@@ -3,8 +3,8 @@ import styleText from './character-thumbnail.scss';
 class CharacterThumbnail extends HTMLElement {
   constructor() {
     super();
-    
-    this.shadow = this.attachShadow({ mode: 'open' });   
+
+    this.shadow = this.attachShadow({ mode: 'open' });
     this.template = document.createElement('template');
     this.styleSheet = new CSSStyleSheet();
 
@@ -14,7 +14,7 @@ class CharacterThumbnail extends HTMLElement {
   render() {
     const image = this.getAttribute('data-image');
     const name = this.getAttribute('data-name');
-     
+
     this.template.innerHTML = `
       <div class="card">
         <div class="card-image">

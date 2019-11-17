@@ -1,12 +1,12 @@
 {
-  "name": "native-web-components",
+  "name": "character-thumbnail",
   "version": "1.0.0",
   "description": "A simple native web component example",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "lint": "eslint src/index.js"
+    "lint": "eslint src/character-thumbnail.js"
   },
   "author": "Juan Diego Lopez",
   "license": "MIT",

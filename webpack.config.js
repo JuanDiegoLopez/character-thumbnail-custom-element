@@ -6,9 +6,9 @@ module.exports = {
     contentBase: path.resolve(__dirname, './dist'),
     historyApiFallback: true,
   },
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/character-thumbnail.js'),
   output: {
-    filename: 'bundle.js',
+    filename: 'character-thumbnail.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
   },
