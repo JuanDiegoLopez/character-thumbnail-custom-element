@@ -12,13 +12,16 @@ class CharacterThumbnail extends HTMLElement {
   }
 
   render() {
+    const image = this.getAttribute('data-image');
+    const name = this.getAttribute('data-name');
+     
     this.template.innerHTML = `
       <div class="card">
         <div class="card-image">
-          <img src="${this.getAttribute('data-image')}">
+          <img src="${image}">
         </div>
         <div class="card-content">
-          <span class="card-title">${this.getAttribute('data-name')}</span>
+          <span class="card-title">${name}</span>
         </div>
       </div>`;
 
