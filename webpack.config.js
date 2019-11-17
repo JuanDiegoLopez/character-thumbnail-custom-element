@@ -6,7 +6,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, './dist'),
     historyApiFallback: true,
   },
-  entry: path.resolve(__dirname, 'src/index.js'),
+  entry: path.resolve(__dirname, 'src/character-thumbnail.js'),
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,7 +17,14 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader'
-      }
-    ]
+      },
+      {
+        test: /\.(sass|scss)$/,
+        use: [
+          'raw-loader',
+          'sass-loader',
+        ],
+      },
+    ],
   }
 }
