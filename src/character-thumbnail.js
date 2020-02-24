@@ -7,21 +7,28 @@ class CharacterThumbnail extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' });
     this.template = document.createElement('template');
     this.styleSheet = new CSSStyleSheet();
+  }
 
+  get image() {
+    return this.getAttribute('image');
+  }
+
+  get name() {
+    return this.getAttribute('name');
+  }
+
+  connectedCallback() {
     this.render();
   }
 
   render() {
-    const image = this.getAttribute('data-image');
-    const name = this.getAttribute('data-name');
-
     this.template.innerHTML = `
       <div class="card">
         <div class="card-image">
-          <img src="${image}">
+          <img src="${this.image}">
         </div>
         <div class="card-content">
-          <span class="card-title">${name}</span>
+          <span class="card-title">${this.name}</span>
         </div>
       </div>`;
 
