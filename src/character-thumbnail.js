@@ -10,11 +10,11 @@ class CharacterThumbnail extends HTMLElement {
   }
 
   get image() {
-    return this.getAttribute('image');
+    return this.getAttribute('data-image');
   }
 
   get name() {
-    return this.getAttribute('name');
+    return this.getAttribute('data-name');
   }
 
   connectedCallback() {
